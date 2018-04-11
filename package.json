@@ -18,6 +18,14 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
+  "scripts": {
+    "dev": "nuxt & tlapse --every 5m --directory ./screens -- localhost:3002",
+    "build": "nuxt build",
+    "start": "pm2 start ./node_modules/nuxt/bin/nuxt-start -i max --attach",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
   "dependencies": {
     "nuxt": "^1.0.0"
   },
