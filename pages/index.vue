@@ -20,11 +20,37 @@
 		</section>
 
 		<section class="popular">
-			<ul>
-				<li v-for="category in categories" :key="category.id">
-					<nuxt-link name="category" :to="'/category/'+category.slug">{{ category.name }}</nuxt-link>
-				</li>
-			</ul>
+			<div class="container">
+				<div class="columns">
+					<div class="column is-one-third">
+						<h2 class="title is-2">Popular</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, consectetur.</p>
+					</div>
+					<div class="column">
+						<div class="columns">
+							<div class="column" v-for="n in 3" :key="n">
+								<div class="card">
+									<div class="card-image">
+										<figure class="image is-4by3">
+											<img :src="'/img/' + categories[n].image" :alt="categories[n].name">
+										</figure>
+									</div>
+									<div class="card-content">
+										<div class="content">
+											<p class="title is-6">{{categories[n].name}}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul>
+					<li v-for="category in categories" :key="category.id">
+						<nuxt-link name="category" :to="'/category/'+category.slug">{{ category.name }}</nuxt-link>
+					</li>
+				</ul>
+			</div>
 		</section>
 	</div>
 </template>
@@ -34,12 +60,8 @@ import AppLogo from '~/components/AppLogo.vue';
 import axios from 'axios';
 
 export default {
-	asyncData({ req, params }) {
-    // We can return a Promise instead of calling the callback
-    	return axios.get('http://localhost:3002/categories.json')
-		.then((res) => {
-			return { categories: res.data }
-		})
+	asyncData({ req, env, params }) {
+		return { categories: env.categories }
 	},
 	components: {
 		AppLogo
@@ -71,5 +93,9 @@ export default {
 			font-size: 20px;
 			margin-top: 20px;
 		}
+	}
+
+	.popular {
+		padding: 150px 0px 200px;
 	}
 </style>
