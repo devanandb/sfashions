@@ -22,56 +22,84 @@
 		<section class="popular">
 			<div class="container">
 				<div class="columns">
-					<div class="column is-one-third">
+					<div v-if="popularView" class="column is-two-fifths">
 						<h2 class="title is-2">Popular</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, consectetur.</p>
+						<p>Checkout our most popular collections. Numquam quis vel doloremque perferendis nam deserunt officiis.</p>
+						<br>
+						<br>
+						<br>
+						<a v-on:click="toggleView('all')" class="arrow-link">View all</a>
+					</div>
+					<div v-if="!popularView" class="column is-two-fifths">
+						<h2 class="title is-2">All categories</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quis vel doloremque perferendis nam deserunt officiis.</p>
+						<br>
+						<br>
+						<br>
+						<a v-on:click="toggleView('popular')" class="arrow-link">View popular</a>
 					</div>
 					<div class="column">
-						<div class="columns">
-							<div class="column" v-for="n in 3" :key="n">
-								<div class="card">
-									<div class="card-image">
-										<figure class="image is-4by3">
-											<img :src="'/img/' + categories[n].image" :alt="categories[n].name">
-										</figure>
-									</div>
-									<div class="card-content">
-										<div class="content">
-											<p class="title is-6">{{categories[n].name}}</p>
-										</div>
-									</div>
-								</div>
+						<div class="columns" v-for="group in filteredCategories" :key="group.id">
+
+							<div class="column" v-for="category in group" :key="category.id">
+								<category-card :category="category"></category-card>
 							</div>
 						</div>
 					</div>
 				</div>
-				<ul>
+				<!-- <ul>
 					<li v-for="category in categories" :key="category.id">
 						<nuxt-link name="category" :to="'/category/'+category.slug">{{ category.name }}</nuxt-link>
 					</li>
-				</ul>
+				</ul> -->
 			</div>
+		</section>
+
+		<section class="about">
+			sdfsdf
 		</section>
 	</div>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue';
+import CategoryCard from '~/components/CategoryCard.vue';
 import axios from 'axios';
+import _ from 'lodash';
 
 export default {
 	asyncData({ req, env, params }) {
-		return { categories: env.categories }
+		// return { filteredCategories:  }
+	},
+	data: function() {
+		return {
+			filteredCategories : _.chunk(_.filter(process.env.categories, function(o) { return o.popular; }), 3),
+			popularView: true
+		}
 	},
 	components: {
-		AppLogo
+		AppLogo, CategoryCard
 	},
 	head () {
 		return {
 			title: 'Home | Samiksha Fashions',
 			meta: [
-				{ hid: 'description', name: 'description', content: 'Samiksha Fashions is a leading vendor for women\'s jewellery needs, be it for day to day or a special occassion!' }
+				{ hid: 'description', name: 'description', content: 'Samiksha Fashions is a leading vendor for women\'s jewelery needs, be it for day to day or a special occassion!' }
 			]
+		}
+	},
+	methods: {
+		toggleView: function(view) {
+			this.filteredCategories = [];
+			console.log(view);
+			if (view === 'popular') {
+				this.filteredCategories = _.chunk(_.filter(process.env.categories, function(o) { return o.popular; }), 3);
+				this.popularView = true;
+			} else {
+				this.filteredCategories = _.chunk(process.env.categories, 3);
+				this.popularView = false;
+			}
+			
 		}
 	}
 }
@@ -95,7 +123,33 @@ export default {
 		}
 	}
 
-	.popular {
+	.arrow-link {
+		display: inline-block;
+		color: #ff5543;
+		font-weight: 600;
+		&:after {
+			content: ' ›';
+			font-size: 18px;
+		}
+		&:hover {
+			// margin-right: 4px;
+			color: #ff5543;
+		}
+	}
+
+
+	.is-catlink {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.about, .popular {
 		padding: 150px 0px 200px;
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSIuNSIgeTE9IjEiIHgyPSIuNSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0wIDBoMWUydjFlMkgweiIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4=);
+	    background-size: 100%;
+	    background-image: -webkit-gradient(linear,50% 100%,50% 0%,color-stop(0%,#f6f6f6),color-stop(100%,#ffffff));
+	    background-image: -moz-linear-gradient(bottom,#f6f6f6 0%,#ffffff 100%);
+	    background-image: -webkit-linear-gradient(bottom,#f6f6f6 0%,#ffffff 100%);
+	    background-image: linear-gradient(to top,#f6f6f6 0%,#ffffff 100%);
 	}
 </style>

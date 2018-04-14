@@ -15,128 +15,125 @@ module.exports = {
 		]
 	},
 	env: {
-		categories:[
-				{
-				"id": 1,
-				"name": "Oxidised Jewelry",
-				"slug": "oxidised-jewelry",
-				"code": "OXJ",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-				"image": "oxidized_j.jpg",
-				"order": 1,
-				"published": 1,
-				"created_at": "2018-02-09 00:37:30",
-				"updated_at": "2018-02-09 00:37:30",
-				"deleted_at": null
-			}, {
-				"id": 2,
-				"name": "Oxidised Earrings",
-				"slug": "oxidised-earrings",
-				"code": "OXE",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-				"image": "oxidised_e.jpg",
-				"order": 2,
-				"published": 1,
-				"created_at": "2018-02-09 00:37:30",
-				"updated_at": "2018-02-09 00:37:30",
-				"deleted_at": null
-			}, {
-				"id": 3,
-				"name": "Oxidised Thread Jewelry",
-				"slug": "oxidised-thread-jewelry",
-				"code": "OXTJ",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-				"image": "oxidised_tj.jpg",
-				"order": 2,
-				"published": 1,
-				"created_at": "2018-02-09 00:37:30",
-				"updated_at": "2018-02-09 00:37:30",
-				"deleted_at": null
-			}, {
-				"id": 4,
-				"name": "Fashion Jewelry",
-				"slug": "fashion-jewelry",
-				"code": "FSJ",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-				"image": "fashion_j.jpg",
-				"order": 2,
-				"published": 1,
-				"created_at": "2018-02-09 00:37:30",
-				"updated_at": "2018-02-09 00:37:30",
-				"deleted_at": null
-			}, {
-				"id": 5,
-				"name": "Traditional Jewelry",
-				"slug": "traditional-jewelry",
-				"code": "TJ",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-				"image": "traditional_j.jpg",
-				"order": 2,
-				"published": 1,
-				"created_at": "2018-02-09 00:37:30",
-				"updated_at": "2018-02-09 00:37:30",
-				"deleted_at": null
-			}, {
-				"id": 6,
-				"name": "Bracelets\/ Bangles",
-				"slug": "bracelets-bangles",
-				"code": "OXE",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-				"image": "bangles.jpg",
-				"order": 2,
-				"published": 1,
-				"created_at": "2018-02-09 00:37:30",
-				"updated_at": "2018-02-09 00:37:30",
-				"deleted_at": null
-			}, {
-				"id": 7,
-				"name": "Anklets",
-				"slug": "anklets",
-				"code": "AK",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-				"image": "anklets.jpg",
-				"order": 2,
-				"published": 1,
-				"created_at": "2018-02-09 00:37:30",
-				"updated_at": "2018-02-09 00:37:30",
-				"deleted_at": null
-			}, {
-				"id": 8,
-				"name": "Maang Tika",
-				"slug": "maang-tika",
-				"code": "MNT",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-				"image": "maang_t.jpg",
-				"order": 2,
-				"published": 1,
-				"created_at": "2018-02-09 00:37:30",
-				"updated_at": "2018-02-09 00:37:30",
-				"deleted_at": null
-			}, {
-				"id": 9,
-				"name": "Bracelets\/ Bangles",
-				"slug": "bracelets-bangles",
-				"code": "OXE",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-				"image": "bangles.jpg",
-				"order": 2,
-				"published": 1,
-				"created_at": "2018-02-09 00:37:30",
-				"updated_at": "2018-02-09 00:37:30",
-				"deleted_at": null
-			}, {
-				"id": 10,
-				"name": "Anklets",
-				"slug": "anklets",
-				"code": "AK",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-				"image": "anklets.jpg",
-				"order": 2,
-				"published": 1,
-				"created_at": "2018-02-09 00:37:30",
-				"updated_at": "2018-02-09 00:37:30",
-				"deleted_at": null
-			}
+		categories: [
+			{
+			"id": 1,
+			"name": "Oxidised Jewelry",
+			"slug": "oxidised-jewelry",
+			"code": "OXJ",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+			"image": "oxidized_j.jpg",
+			"order": 1,
+			"published": 1,
+			"created_at": "2018-02-09 00:37:30",
+			"updated_at": "2018-02-09 00:37:30",
+			"deleted_at": null,
+			"popular": true
+		}, {
+			"id": 2,
+			"name": "Oxidised Earrings",
+			"slug": "oxidised-earrings",
+			"code": "OXE",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+			"image": "oxidised_e.jpg",
+			"order": 2,
+			"published": 1,
+			"created_at": "2018-02-09 00:37:30",
+			"updated_at": "2018-02-09 00:37:30",
+			"deleted_at": null,
+			"popular": true
+		}, {
+			"id": 3,
+			"name": "Oxidised Thread Jewelry",
+			"slug": "oxidised-thread-jewelry",
+			"code": "OXTJ",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+			"image": "oxidised_tj.jpg",
+			"order": 2,
+			"published": 1,
+			"created_at": "2018-02-09 00:37:30",
+			"updated_at": "2018-02-09 00:37:30",
+			"deleted_at": null,
+			"popular": true
+		}, {
+			"id": 4,
+			"name": "Fashion Jewelry",
+			"slug": "fashion-jewelry",
+			"code": "FSJ",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+			"image": "fashion_j.jpg",
+			"order": 2,
+			"published": 1,
+			"created_at": "2018-02-09 00:37:30",
+			"updated_at": "2018-02-09 00:37:30",
+			"deleted_at": null,
+			"popular": false
+		}, {
+			"id": 5,
+			"name": "Traditional Jewelry",
+			"slug": "traditional-jewelry",
+			"code": "TJ",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+			"image": "traditional_j.jpg",
+			"order": 2,
+			"published": 1,
+			"created_at": "2018-02-09 00:37:30",
+			"updated_at": "2018-02-09 00:37:30",
+			"deleted_at": null,
+			"popular": false
+		}, {
+			"id": 6,
+			"name": "Bracelets\/ Bangles",
+			"slug": "bracelets-bangles",
+			"code": "OXE",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+			"image": "bangles.jpg",
+			"order": 2,
+			"published": 1,
+			"created_at": "2018-02-09 00:37:30",
+			"updated_at": "2018-02-09 00:37:30",
+			"deleted_at": null,
+			"popular": false
+		}, {
+			"id": 7,
+			"name": "Anklets",
+			"slug": "anklets",
+			"code": "AK",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+			"image": "anklets.jpg",
+			"order": 2,
+			"published": 1,
+			"created_at": "2018-02-09 00:37:30",
+			"updated_at": "2018-02-09 00:37:30",
+			"deleted_at": null,
+			"popular": false
+		}, {
+			"id": 8,
+			"name": "Maang Tika",
+			"slug": "maang-tika",
+			"code": "MNT",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+			"image": "maang_t.jpg",
+			"order": 2,
+			"published": 1,
+			"created_at": "2018-02-09 00:37:30",
+			"updated_at": "2018-02-09 00:37:30",
+			"deleted_at": null,
+			"popular": false
+		}, {
+			"id": 9,
+			"name": "Bracelets\/ Bangles",
+			"slug": "bracelets-bangles",
+			"code": "OXE",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+			"image": "bangles.jpg",
+			"order": 2,
+			"published": 1,
+			"created_at": "2018-02-09 00:37:30",
+			"updated_at": "2018-02-09 00:37:30",
+			"deleted_at": null,
+			"popular": false
+		}
 		]
 	},
 	css: [
@@ -165,6 +162,7 @@ module.exports = {
 					exclude: /(node_modules)/
 				})
 			}
-		}
+		},
+		vendor: ['axios', 'lodash']
 	}
 }
