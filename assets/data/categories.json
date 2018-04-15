@@ -1,31 +1,71 @@
 [
 	{
-	"id": 1,
-	"name": "Oxidised Jewelry",
-	"slug": "oxidised-jewelry",
-	"code": "OXJ",
-	"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-	"image": "oxidized_j.jpg",
-	"order": 1,
-	"published": 1,
-	"created_at": "2018-02-09 00:37:30",
-	"updated_at": "2018-02-09 00:37:30",
-	"deleted_at": null,
-	"popular": true
-}, {
-	"id": 2,
-	"name": "Oxidised Earrings",
-	"slug": "oxidised-earrings",
-	"code": "OXE",
-	"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-	"image": "oxidised_e.jpg",
-	"order": 2,
-	"published": 1,
-	"created_at": "2018-02-09 00:37:30",
-	"updated_at": "2018-02-09 00:37:30",
-	"deleted_at": null,
-	"popular": true
-}, {
+		"id": 1,
+		"name": "Bangles",
+		"slug": "bangles",
+		"code": "SFB001",
+		"description": "Bangles: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+		"image": "bangles.jpg",
+		"order": 1,
+		"published": 1,
+		"created_at": "2018-02-09 00:37:30",
+		"updated_at": "2018-02-09 00:37:30",
+		"deleted_at": null,
+		"popular": true,
+		"products": [
+			{
+				"id": 1,
+				"name": "",
+				"code": "SFB001",
+				"sizes": [
+					{
+						"title": "2.4",
+						"unit": "",
+						"help": ""
+					},
+					{
+						"title": "2.6",
+						"unit": "",
+						"help": ""
+					},
+					{
+						"title": "2.8",
+						"unit": "",
+						"help": ""
+					}
+				],
+				"images": [
+					{
+						"src": "",
+						"alt": "",
+						"filename": ""
+					}
+				],
+				"cost": 200.00,
+				"description": "Gold Plated Bangles - Set of 8",
+				"colors": []
+			},
+			{
+				"id": 1,
+				"name": "",
+				"code": ""
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Oxidised Earrings",
+		"slug": "oxidised-earrings",
+		"code": "OXE",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+		"image": "oxidised_e.jpg",
+		"order": 2,
+		"published": 1,
+		"created_at": "2018-02-09 00:37:30",
+		"updated_at": "2018-02-09 00:37:30",
+		"deleted_at": null,
+		"popular": true
+	}, {
 	"id": 3,
 	"name": "Oxidised Thread Jewelry",
 	"slug": "oxidised-thread-jewelry",

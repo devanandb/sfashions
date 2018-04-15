@@ -17,32 +17,296 @@ module.exports = {
 	env: {
 		categories: [
 			{
-			"id": 1,
-			"name": "Oxidised Jewelry",
-			"slug": "oxidised-jewelry",
-			"code": "OXJ",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-			"image": "oxidized_j.jpg",
-			"order": 1,
-			"published": 1,
-			"created_at": "2018-02-09 00:37:30",
-			"updated_at": "2018-02-09 00:37:30",
-			"deleted_at": null,
-			"popular": true
-		}, {
-			"id": 2,
-			"name": "Oxidised Earrings",
-			"slug": "oxidised-earrings",
-			"code": "OXE",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
-			"image": "oxidised_e.jpg",
-			"order": 2,
-			"published": 1,
-			"created_at": "2018-02-09 00:37:30",
-			"updated_at": "2018-02-09 00:37:30",
-			"deleted_at": null,
-			"popular": true
-		}, {
+				"id": 1,
+				"name": "Bangles",
+				"slug": "bangles",
+				"code": "SFB001",
+				"description": "Bangles: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+				"image": "bangles.jpg",
+				"order": 1,
+				"published": 1,
+				"created_at": "2018-02-09 00:37:30",
+				"updated_at": "2018-02-09 00:37:30",
+				"deleted_at": null,
+				"popular": true,
+				"products": [
+					{
+						"id": 1,
+						"name": "",
+						"code": "SFB001",
+						"sizes": [
+							{
+								"title": "2.4",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.6",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.8",
+								"unit": "",
+								"help": ""
+							}
+						],
+						"images": [
+							{
+								"src": "SFB001.jpg",
+								"alt": "",
+								"filename": ""
+							}
+						],
+						"cost": 200.00,
+						"description": "Gold Plated Bangles - Set of 8",
+						"colors": []
+					},
+					{
+						"id": 2,
+						"name": "",
+						"code": "SFB002",
+						"sizes": [
+							{
+								"title": "2.4",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.6",
+								"unit": "",
+								"help": ""
+							}
+						],
+						"images": [
+							{
+								"src": "SFB001.jpg",
+								"alt": "",
+								"filename": ""
+							}
+						],
+						"cost": 200.00,
+						"description": "Gold Plated Bangles - Set of 8",
+						"colors": []
+					},
+					{
+						"id": 3,
+						"name": "",
+						"code": "SFB003",
+						"sizes": [
+							{
+								"title": "2.4",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.6",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.8",
+								"unit": "",
+								"help": ""
+							}
+						],
+						"images": [
+							{
+								"src": "SFB003.jpg",
+								"alt": "",
+								"filename": ""
+							}
+						],
+						"cost": 200.00,
+						"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, porro!",
+						"colors": []
+					},
+					{
+						"id": 4,
+						"name": "",
+						"code": "SFB004",
+						"sizes": [
+							{
+								"title": "2.4",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.6",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.8",
+								"unit": "",
+								"help": ""
+							}
+						],
+						"images": [
+							{
+								"src": "SFB004.jpg",
+								"alt": "",
+								"filename": ""
+							}
+						],
+						"cost": 200.00,
+						"description": "Gold Plated Bangles - Set of 8",
+						"colors": []
+					},
+					{
+						"id": 5,
+						"name": "",
+						"code": "SFB005",
+						"sizes": [
+							{
+								"title": "2.0",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.2",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.4",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.6",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.8",
+								"unit": "",
+								"help": ""
+							}
+						],
+						"images": [
+							{
+								"src": "SFB003.jpg",
+								"alt": "",
+								"filename": ""
+							}
+						],
+						"cost": 200.00,
+						"description": "Gold Plated Bangles - Set of 8",
+						"colors": []
+					},
+					{
+						"id": 6,
+						"name": "",
+						"code": "SFB006",
+						"sizes": [
+							{
+								"title": "2.4",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.6",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.8",
+								"unit": "",
+								"help": ""
+							}
+						],
+						"images": [
+							{
+								"src": "SFB006.jpg",
+								"alt": "",
+								"filename": ""
+							}
+						],
+						"cost": 200.00,
+						"description": "Gold Plated Bangles - Set of 8",
+						"colors": []
+					},
+					{
+						"id": 7,
+						"name": "",
+						"code": "SFB007",
+						"sizes": [
+							{
+								"title": "2.4",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.6",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.8",
+								"unit": "",
+								"help": ""
+							}
+						],
+						"images": [
+							{
+								"src": "SFB003.jpg",
+								"alt": "",
+								"filename": ""
+							}
+						],
+						"cost": 200.00,
+						"description": "Gold Plated Bangles - Set of 8",
+						"colors": []
+					},
+					{
+						"id": 8,
+						"name": "",
+						"code": "SFB008A",
+						"sizes": [
+							{
+								"title": "2.4",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.6",
+								"unit": "",
+								"help": ""
+							},
+							{
+								"title": "2.8",
+								"unit": "",
+								"help": ""
+							}
+						],
+						"images": [
+							{
+								"src": "SFB008.jpg",
+								"alt": "",
+								"filename": ""
+							}
+						],
+						"cost": 200.00,
+						"description": "Gold Plated Bangles - Set of 8",
+						"colors": []
+					}
+				]
+			},
+			{
+				"id": 2,
+				"name": "Oxidised Earrings",
+				"slug": "oxidised-earrings",
+				"code": "OXE",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+				"image": "oxidised_e.jpg",
+				"order": 2,
+				"published": 1,
+				"created_at": "2018-02-09 00:37:30",
+				"updated_at": "2018-02-09 00:37:30",
+				"deleted_at": null,
+				"popular": true
+			}, {
 			"id": 3,
 			"name": "Oxidised Thread Jewelry",
 			"slug": "oxidised-thread-jewelry",
@@ -54,7 +318,7 @@ module.exports = {
 			"created_at": "2018-02-09 00:37:30",
 			"updated_at": "2018-02-09 00:37:30",
 			"deleted_at": null,
-			"popular": true
+			"popular": false
 		}, {
 			"id": 4,
 			"name": "Fashion Jewelry",
@@ -106,7 +370,7 @@ module.exports = {
 			"created_at": "2018-02-09 00:37:30",
 			"updated_at": "2018-02-09 00:37:30",
 			"deleted_at": null,
-			"popular": false
+			"popular": true
 		}, {
 			"id": 8,
 			"name": "Maang Tika",
@@ -127,6 +391,19 @@ module.exports = {
 			"code": "OXE",
 			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
 			"image": "bangles.jpg",
+			"order": 2,
+			"published": 1,
+			"created_at": "2018-02-09 00:37:30",
+			"updated_at": "2018-02-09 00:37:30",
+			"deleted_at": null,
+			"popular": true
+		}, {
+			"id": 10,
+			"name": "Anklets",
+			"slug": "anklets",
+			"code": "AK",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sequi.",
+			"image": "anklets.jpg",
 			"order": 2,
 			"published": 1,
 			"created_at": "2018-02-09 00:37:30",

@@ -49,7 +49,7 @@
 
 <style lang="scss">
 header {
-	padding-top: 20px;
+	// padding-top: 20px;
 	background-color: #ff5543;
 	color: #fff;
 	.navbar {
