@@ -1,24 +1,28 @@
 <template>
 	<div>
 		<section class="category-hero">
-			<div class="container">
+			<div class="uk-container">
 				<h1 class="is-h1">{{ currcategory.name }}</h1>
 				<p>{{ currcategory.description }}</p>
 			</div>
 		</section>
 		<section class="category-blk">
-			<div class="container">
-				<div class="columns">
-					<div class="column">
-						<div class="columns is-multiline is-mobile">
-							<div class="column is-half" v-for="product in currcategory.products" :key="product.id">
+			<div class="uk-container">
+				<div class="" uk-grid>
+					<div class="uk-width-3-4@m">
+						<div class=" is-multiline is-mobile" uk-grid>
+							<div class="uk-width-1-3@m" v-for="product in currcategory.products" :key="product.id">
 								<product-card :product="product"></product-card>
 							</div>
 						</div>
 					</div>
 
-					<div class="column is-one-quarter">
-						{{categories[0].name}}
+					<div class="uk-width-1-4@m">
+						<ul class="uk-list">
+							<li class="each-link" v-for="category in categories" :key="category.id">
+								<nuxt-link :to="'/category/'+category.slug" >{{category.name}}</nuxt-link>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -49,9 +53,9 @@ export default {
 	},
 	head () {
 		return {
-			title: 'Home | Samiksha Fashions',
+			title: this.currcategory.name + ' | Samiksha Fashions',
 			meta: [
-				{ hid: 'description', name: 'description', content: 'Samiksha Fashions is a leading vendor for women\'s jewellery needs, be it for day to day or a special occassion!' }
+				{ hid: 'description', name: 'description', content: this.currcategory.description }
 			]
 		}
 	}
@@ -93,5 +97,6 @@ export default {
 	    background-image: -moz-linear-gradient(bottom,#f6f6f6 0%,#ffffff 100%);
 	    background-image: -webkit-linear-gradient(bottom,#f6f6f6 0%,#ffffff 100%);
 	    background-image: linear-gradient(to top,#f6f6f6 0%,#ffffff 100%);
+	    padding-bottom: 100px;
 	}
 </style>

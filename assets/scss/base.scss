@@ -1,5 +1,18 @@
+
+/*// site.scss*/
+
+/*// 1. Your custom variables and variable overwrites.*/
+
+/*// 2. Import default variables and available mixins.*/
+@import "~uikit/src/scss/variables.scss";
+@import "~uikit/src/scss/mixins.scss";
+
+@import "override.scss";
+/*// 4. Import UIkit*/
+@import "~uikit/src/scss/uikit.scss";
+
 body {
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans', sans-serif !important;
 	min-height: 100vh;
 }
 

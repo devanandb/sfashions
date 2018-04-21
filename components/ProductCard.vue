@@ -1,22 +1,26 @@
 <template>
 	<div class="card" name="product" >
-		<div class="card-image">
-			<figure class="image is-1by1">
+		<div class="card-image" uk-lightbox>
+			<a :href="'/img/' + product.code + '.jpg'">
 				<img :src="'/img/' + product.code + '.jpg'" :alt="product.name">
-			</figure>
+			</a>
 		</div>
 		<div class="card-content">
 			<div class="content">
 				<p class="title is-prodname">{{product.name ? product.name : product.code }}</p>
 				<p class="is-proddesc">{{ product.description }}</p>
-				<div class="columns">
-					<div class="column is-three-quarters">
-						<div class="is-size isvcentered" v-for="size in product.sizes" :key="size.title">
-							{{ size.title }}
+				<div class="xxxs">
+					<div class="" uk-grid>
+						<div class="uk-width-3-4@m">
+							<div class="is-size" v-for="size in product.sizes" :key="size.title">
+								{{ size.title }}
+							</div>
 						</div>
-					</div>
-					<div class="column">
-						<div class="is-pulled-right is-cost">&#8377;{{ product.cost }}</div>
+						<div class="uk-width-1-4@m">
+							<div class="is-cost">
+								{{ product.cost }}
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -45,8 +49,10 @@
 	    transform: translateY(0)!important;
 	    .card-content {
 	    	min-height: 100px;
+	    	padding: 10px;
 	    	.is-prodname {
 	    		font-size: 18px;
+	    		font-weight: 600;
 	    	}
 	    	.is-proddesc {
 	    		font-size: 14px;
@@ -56,19 +62,20 @@
 	    	.is-size {
 				text-align: center;
 				background-color: lighten(#5FC26C, 35%);
-				font-weight: 600;
-				color: #666;
-				font-size: 18px;
-				line-height: 45px;
+				font-weight: 400;
+				color: #999;
+				font-size: 14px;
+				line-height: 20px;
 				display: inline-block;
 				padding: 0px 10px;
-				margin-right: 10px;
+				margin-right: 8px;
+				margin-bottom: 8px;
 	    	}
 
 	    	.is-cost {
-	    		font-weight: 600;
-	    		font-size: 28px;
-	    		color: #5FC26C;
+	    		font-weight: 400;
+	    		font-size: 22px;
+	    		color: #666;
 	    	}
 	    }
 	    .card-image {

@@ -1,12 +1,17 @@
 <template>
 	<div>
 		<section class="hero">
-			<div class="container">
-				<div class="columns hero-blk">
+			<div class="uk-container">
+				<div class="hero-blk">
+					<div class="uk-grid">
+						<div class="uk-width-3-4@m">
+							<h1 class="uk-dark">Flaunt your style</h1>
+							<p>Samiksha Fashions is a leading vendor for women's jewelery needs, be it for everyday or a special occassion!</p>
+						</div>
+					</div>
 					<div class="column">
 						<div class="text-blk">
-							<h1 class="is-h1">Flaunt your style</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae esse alias suscipit ut, minus consequuntur.</p>
+							
 						</div>
 					</div>
 					<div class="column">
@@ -20,38 +25,37 @@
 		</section>
 
 		<section class="popular">
-			<div class="container">
-				<div class="columns">
-					<div v-if="popularView" class="column is-two-fifths">
-						<h2 class="title is-2">Popular</h2>
-						<p>Checkout our most popular collections. Numquam quis vel doloremque perferendis nam deserunt officiis.</p>
-						<br>
-						<br>
-						<br>
-						<a v-on:click="toggleView('all')" class="arrow-link">View all</a>
-					</div>
-					<div v-if="!popularView" class="column is-two-fifths">
-						<h2 class="title is-2">All categories</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quis vel doloremque perferendis nam deserunt officiis.</p>
-						<br>
-						<br>
-						<br>
-						<a v-on:click="toggleView('popular')" class="arrow-link">View popular</a>
-					</div>
-					<div class="column">
-						<div class="columns" v-for="group in filteredCategories" :key="group.id">
-
-							<div class="column" v-for="category in group" :key="category.id">
-								<category-card :category="category"></category-card>
+			<div class="uk-container">
+				<div class="uk-container">
+					<div class="uk-grid">
+						<div class="uk-width-2-5@m">
+							<div v-if="popularView" class="column is-two-fifths">
+								<h2 class="title is-2">Popular</h2>
+								<p>Checkout our most popular collections. Numquam quis vel doloremque perferendis nam deserunt officiis.</p>
+								<br>
+								<br>
+								<br>
+								<a v-on:click="toggleView('all')" class="arrow-link">View all</a>
+							</div>
+							<div v-if="!popularView" class="column is-two-fifths">
+								<h2 class="title is-2">All categories</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quis vel doloremque perferendis nam deserunt officiis.</p>
+								<br>
+								<br>
+								<br>
+								<a v-on:click="toggleView('popular')" class="arrow-link">View popular</a>
+							</div>
+						</div>
+						<div class="uk-width-3-5@m">
+							<div class="uk-grid" v-for="group in filteredCategories" :key="group.id">
+						
+								<div class="uk-width-1-2@m" v-for="category in group" :key="category.id">
+									<category-card :category="category"></category-card>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- <ul>
-					<li v-for="category in categories" :key="category.id">
-						<nuxt-link name="category" :to="'/category/'+category.slug">{{ category.name }}</nuxt-link>
-					</li>
-				</ul> -->
 			</div>
 		</section>
 
@@ -116,6 +120,7 @@ export default {
 			font-size: 44px;
 			line-height: 60px;
 			font-weight: 700;
+			color: #fff;
 		}
 		p {
 			font-size: 20px;

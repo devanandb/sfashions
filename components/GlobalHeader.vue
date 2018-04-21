@@ -1,74 +1,49 @@
 <template>
-	<div class="container">
-		<nav class="navbar is-transparent">
-			<div class="navbar-brand">
-				<a class="navbar-item" href="/">
-					<strong>Samiksha Fashions</strong>
-				</a>
-				<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
+	<header>
+		<div class="uk-container">
+			<nav class="uk-navbar-container uk-margin uk-navbar-transparent" uk-navbar>
+			    <div class="uk-navbar-left">
 		
-			<div id="" class="navbar-menu">
-				<div class="navbar-start">
-					<nuxt-link class="navbar-item" to="/">Home</nuxt-link>
-					<nuxt-link class="navbar-item" to="/category">Categories</nuxt-link>
-				</div>
+			        <a class="uk-navbar-item uk-logo" href="#">Samiksha Fashions</a>
 		
-				<div class="navbar-end">
-					<div class="navbar-item">
-						<div class="field is-grouped">
-							<p class="control">
-								<a class="bd-tw-button button" data-social-network="Facebook" data-social-action="tweet" data-social-target="https://www.facebook.com/Samikshafashionjewellery" target="_blank" href="https://www.facebook.com/Samikshafashionjewellery">
-									<span class="icon">
-										<i class="fa fa-facebook"></i>
-									</span>
-									<span>
-										Facebook
-									</span>
-								</a>
-							</p>
-							<p class="control">
-								<a class="button is-secondary" href="https://github.com/jgthms/bulma/releases/download/0.6.2/bulma-0.6.2.zip">
-									<span class="icon">
-										<i class="fa fa-download"></i>
-									</span>
-									<span>Download</span>
-								</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
+			        <ul class="uk-navbar-nav">
+			            <li>
+			                <a href="#">
+			                	Categories
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			</nav>
+		</div>
+	</header>
 </template>
 
 <style lang="scss">
 header {
 	// padding-top: 20px;
 	background-color: #ff5543;
-	color: #fff;
-	.navbar {
-		background-color: transparent;
-		min-height: 5rem;
+	.uk-navbar {
+		background: transparent;
+		color: #fff;
+		// min-height: 5rem;
 	}
 
-	.navbar-brand a {
-		color: #fff;
+	.uk-logo {
+		color: #efefef;
 		font-size: 24px;
 		margin-right: 20px;
+		font-family: 'Noto Sans', sans-serif !important;
+		font-weight: 600;
+		padding-left: 0px;
+		&:hover {
+			color: #fff;
+		}
 	}
 
-	.navbar-item, .navbar-link {
+	.uk-navbar-nav > li > a {
 		color: #fff;
 		font-size: 16px;
-	}
-	.navbar-dropdown .navbar-item {
-		color: #666;
 	}
 }
 </style>

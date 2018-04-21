@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 module.exports = {
 	/*
 	** Headers of the page
@@ -12,6 +13,10 @@ module.exports = {
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700'}
+		],
+		script: [
+			{src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'},
+			{src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit.min.js'}
 		]
 	},
 	env: {
@@ -415,9 +420,11 @@ module.exports = {
 	},
 	css: [
 		// node.js module but we specify the pre-processor
-		{ src: '~/assets/scss/override.scss', lang: 'scss' },
-		{ src: '~/assets/scss/base.scss', lang: 'scss' },
-		{ src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' },
+		
+		{ src: '~/assets/scss/base.scss', lang: 'scss' }
+	],
+	plugins: [
+		// { src: '~/plugins/uikit.js'}
 	],
 	/*
 	** Customize the progress bar color
@@ -430,6 +437,16 @@ module.exports = {
 		/*
 		** Run ESLint on save
 		*/
+		vendor: ['axios', 'lodash', 'jquery', 'uikit'],
+		plugins: [
+	      // set shortcuts as global for bootstrap
+	      new webpack.ProvidePlugin({
+	        $: 'jquery',
+	        jQuery: 'jquery',
+	        'window.jQuery': 'jquery'
+	      })
+	    ],
+
 		extend (config, { isDev, isClient }) {
 			if (isDev && isClient) {
 				config.module.rules.push({
@@ -440,6 +457,5 @@ module.exports = {
 				})
 			}
 		},
-		vendor: ['axios', 'lodash']
 	}
 }
