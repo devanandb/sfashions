@@ -16,8 +16,7 @@ module.exports = {
 		],
 		script: [
 			{src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'},
-			{src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit.min.js'},
-			{src: '//downloads.mailchimp.com/js/signup-forms/popup/embed.js'}
+			{src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit.min.js'}
 		]
 	},
 	env: {
