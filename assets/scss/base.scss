@@ -19,3 +19,8 @@ body {
 .wrapper {
 	min-height: 80vh;
 }
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

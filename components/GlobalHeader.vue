@@ -4,7 +4,7 @@
 			<nav class="uk-navbar-container uk-margin uk-navbar-transparent" uk-navbar>
 			    <div class="uk-navbar-left">
 		
-			        <a class="uk-navbar-item uk-logo" href="#">Samiksha Fashions</a>
+			        <a class="uk-navbar-item uk-logo" href="/">Samiksha Fashions</a>
 		
 			        <ul class="uk-navbar-nav">
 			            <li>
@@ -22,7 +22,9 @@
 <style lang="scss">
 header {
 	// padding-top: 20px;
-	background-color: #ff5543;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	background-color: #154696;
 	.uk-navbar {
 		background: transparent;
 		color: #fff;
