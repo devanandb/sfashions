@@ -18,6 +18,7 @@
 						</div>
 						<div class="uk-width-1-4@m">
 							<div class="is-cost">
+
 								{{ product.cost }}
 							</div>
 						</div>
@@ -87,9 +88,7 @@
     	    -webkit-box-shadow: 0 10px 35px 5px rgba(0,0,0,.2);
     	    box-shadow: 0 10px 35px 5px rgba(0,0,0,.2);
     	    transform: translateY(-8px)!important;
-    	    .is-catlink {
-    	    	// color: #ff5543;
-    	    }
+    	    
 	    }
 	}
 </style>

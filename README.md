@@ -15,8 +15,36 @@ $ npm run dev
 $ npm run build
 $ npm start
 
-# generate static project
-$ npm run generate
-```
+## Graphql query
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+{
+  allCategories {
+    id
+    name
+    description
+    slug
+    popular
+    products {
+      id
+      name
+      slug
+      code
+      cost
+      description
+      material
+      occasion
+      category {
+        name
+        slug
+      }
+      images {
+        url
+        title
+      }
+      sizes {
+        value
+      }
+    }
+  }
+}
+
