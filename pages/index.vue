@@ -29,7 +29,7 @@
 			<div class="uk-container">
 				<div class="uk-container">
 					<div class="uk-grid">
-						<div class="uk-width-2-5@m">
+						<!-- <div class="uk-width-2-5@m">
 							<div v-if="popularView" class="column is-two-fifths">
 								<h2 class="title is-2">Popular</h2>
 								<p>Checkout our most popular collections. Numquam quis vel doloremque perferendis nam deserunt officiis.</p>
@@ -46,11 +46,11 @@
 								<br>
 								<a v-on:click="toggleView('popular')" class="arrow-link">View popular</a>
 							</div>
-						</div>
+						</div> -->
 						<div class="uk-width-3-5@m">
-							<div uk-grid uk-height-match="target: .card" v-for="group in filteredCategories" :key="group.id">
+							<div uk-grid uk-height-match="target: .card">
 						
-								<div class="uk-width-1-2@m" v-for="category in group" :key="category.id">
+								<div class="uk-width-1-2@m" v-for="category in categories" :key="category.id">
 									<category-card :category="category"></category-card>
 								</div>
 							</div>
@@ -71,17 +71,18 @@ import AppLogo from '~/components/AppLogo.vue';
 import CategoryCard from '~/components/CategoryCard.vue';
 import axios from 'axios';
 import _ from 'lodash';
+import { mapState } from 'vuex';
+
+
+import store from '~/store/categories';
 
 export default {
-	asyncData({ req, env, params }) {
-		// return { filteredCategories:  }
+	fetch({ store }) {
+		store.commit('getCategories')
 	},
-	data: function() {
-		return {
-			filteredCategories : _.chunk(_.filter(process.env.categories, function(o) { return o.popular; }), 4),
-			popularView: true
-		}
-	},
+	computed: mapState([
+		'categories'
+	]),
 	components: {
 		AppLogo, CategoryCard
 	},
@@ -94,18 +95,18 @@ export default {
 		}
 	},
 	methods: {
-		toggleView: function(view) {
-			this.filteredCategories = [];
-			console.log(view);
-			if (view === 'popular') {
-				this.filteredCategories = _.chunk(_.filter(process.env.categories, function(o) { return o.popular; }), 4);
-				this.popularView = true;
-			} else {
-				this.filteredCategories = _.chunk(process.env.categories, 4);
-				this.popularView = false;
-			}
+		// toggleView: function(view) {
+		// 	this.filteredCategories = [];
+		// 	console.log(view);
+		// 	if (view === 'popular') {
+		// 		this.filteredCategories = _.chunk(_.filter(process.env.categories, function(o) { return o.popular; }), 4);
+		// 		this.popularView = true;
+		// 	} else {
+		// 		this.filteredCategories = _.chunk(process.env.categories, 4);
+		// 		this.popularView = false;
+		// 	}
 			
-		}
+		// }
 	}
 }
 </script>
