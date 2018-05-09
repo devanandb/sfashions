@@ -32,7 +32,7 @@ module.exports = {
 	],
 	modules: [
 		['@nuxtjs/google-tag-manager', { id: 'GTM-KPDX5FN' }],
-	]
+	],
 	/*
 	** Customize the progress bar color
 	*/
