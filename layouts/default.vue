@@ -16,11 +16,16 @@
 import AppLogo from '~/components/AppLogo.vue'
 import GlobalHeader from '~/components/GlobalHeader.vue'
 import GlobalFooter from '~/components/GlobalFooter.vue'
+import store from '~/store/store'
 
 export default {
-  components: {
-    AppLogo, GlobalHeader, GlobalFooter
-  }
+	store,
+  	components: {
+    	AppLogo, GlobalHeader, GlobalFooter
+  	},
+  	mounted: function () {
+      	this.$store.dispatch('getCategories');
+    }
 }
 </script>
 

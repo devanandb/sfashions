@@ -19,7 +19,7 @@
 
 					<div class="uk-width-1-4@m">
 						<ul class="uk-list">
-							<li class="each-link" v-for="category in categories" :key="category.id">
+							<li class="each-link" v-for="category in $store.categories" :key="category.id">
 								<nuxt-link :to="'/category/'+category.slug" >{{category.name}}</nuxt-link>
 							</li>
 						</ul>
@@ -36,16 +36,16 @@ import ProductCard from '~/components/ProductCard.vue';
 
 export default {
 	asyncData({ params, env, error }) {
-		const category = env.categories.find((category) => String(category.slug) === params.index);
-		if (!category) {
-		  return error({ message: 'Category not found', statusCode: 404 });
-		}
-		return {currcategory: category}
+		// const category = env.categories.find((category) => String(category.slug) === params.index);
+		// if (!category) {
+		//   return error({ message: 'Category not found', statusCode: 404 });
+		// }
+		// return {currcategory: category}
 	},
 	data: function() {
-		return {
-			categories: process.env.categories,
-		}
+		// return {
+		// 	categories: process.env.categories,
+		// }
 	},
 
 	components: {

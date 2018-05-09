@@ -2,7 +2,7 @@
 	<nuxt-link class="card" name="category" :to="'/category/'+category.slug">
 		<div class="card-image">
 			<figure class="image">
-				<img :src="'/img/' + category.image" :alt="category.name">
+				<img :src="'/img/' + category.slug + '.jpg'" :alt="category.name">
 			</figure>
 		</div>
 		<div class="card-content">

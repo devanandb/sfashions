@@ -1,7 +1,8 @@
 <template>
 	<footer class="footer">
 		<div class="container">
-			<div class="content has-text-centered">
+			<div class="content uk-text-center">
+				<br>
 				<p>
 					<strong>Samiksha Fashions</strong> &copy; Copyright 2018.
 				</p>
