@@ -28,8 +28,11 @@ module.exports = {
 		{ src: '~/assets/scss/base.scss', lang: 'scss' }
 	],
 	plugins: [
-		{ src: '~plugins/ga.js', ssr: false }
+		// { src: '~plugins/ga.js', ssr: false }
 	],
+	modules: [
+		['@nuxtjs/google-tag-manager', { id: 'GTM-KPDX5FN' }],
+	]
 	/*
 	** Customize the progress bar color
 	*/
