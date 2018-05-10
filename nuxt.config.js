@@ -20,7 +20,7 @@ module.exports = {
 		]
 	},
 	env: {
-		categories: []
+		baseURL: (process.env.NODE_ENV === 'production' ? 'https://samikshafashions.com' : 'http://localhost:3002')
 	},
 	css: [
 		// node.js module but we specify the pre-processor

@@ -18,7 +18,7 @@ const mutations = {
 const actions = {
     getCategories(context) {
         // let data = JSON.parse(fs.readFileSync('static/data.json', 'utf8'));
-        let data = axios.get('http://localhost:3002/data.json')
+        let data = axios.get(process.env.baseURL + '/data.json')
           .then((res) => {
             // console.log(res)
                 let categories = res.data.data.allCategories;
