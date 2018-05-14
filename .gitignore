@@ -12,3 +12,6 @@ dist
 
 
 screens
+
+# for now
+store/store.js

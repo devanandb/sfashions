@@ -2,8 +2,8 @@
 	<div>
 		<section class="category-hero">
 			<div class="uk-container">
-				<h1 class="is-h1">{{ currcategory.name }}</h1>
-				<p>{{ currcategory.description }}</p>
+				<!-- <h1 class="is-h1">{{ currcategory.name }}</h1> -->
+				<!-- <p>{{ currcategory.description }}</p> -->
 			</div>
 		</section>
 		<section class="category-blk">
@@ -11,15 +11,15 @@
 				<div class="" uk-grid>
 					<div class="uk-width-3-4@m">
 						<div class=" is-multiline is-mobile" uk-grid>
-							<div class="uk-width-1-3@m" v-for="product in currcategory.products" :key="product.id">
+							<!-- <div class="uk-width-1-3@m" v-for="product in currcategory.products" :key="product.id">
 								<product-card :product="product"></product-card>
-							</div>
+							</div> -->
 						</div>
 					</div>
 
 					<div class="uk-width-1-4@m">
 						<ul class="uk-list">
-							<li class="each-link" v-for="category in $store.categories" :key="category.id">
+							<li class="each-link" v-for="category in $store.state.categories" :key="category.id">
 								<nuxt-link :to="'/category/'+category.slug" >{{category.name}}</nuxt-link>
 							</li>
 						</ul>
@@ -33,29 +33,37 @@
 <script>
 import axios from 'axios';
 import ProductCard from '~/components/ProductCard.vue';
+import store from '~/store/store';
+import { mapState } from 'vuex'
 
 export default {
-	asyncData({ params, env, error }) {
-		// const category = env.categories.find((category) => String(category.slug) === params.index);
-		// if (!category) {
-		//   return error({ message: 'Category not found', statusCode: 404 });
-		// }
-		// return {currcategory: category}
+	// asyncData({store, params}) {
+	// 	let allcategories = store.state.categories;
+	// 	// let category = allcategories;
+	// 	// const category = allcategories.find((category) => String(category.slug) === params.index);
+	// 	// let cslug = params.index;
+	// 	return {category: allcategories}
+	// },
+	// data: function() {
+	// 	return {
+	// 		categories: this.$store.state.categories
+	// 	}
+	// },
+	fetch({ store }) {
+	    // store.commit('increment')
+	    console.log(categories);
 	},
-	data: function() {
-		// return {
-		// 	categories: process.env.categories,
-		// }
-	},
-
+	computed: mapState([
+	    'categories'
+	]),
 	components: {
 		ProductCard
 	},
 	head () {
 		return {
-			title: this.currcategory.name + ' | Samiksha Fashions',
+			// title: this.currcategory.name + ' | Samiksha Fashions',
 			meta: [
-				{ hid: 'description', name: 'description', content: this.currcategory.description }
+				// { hid: 'description', name: 'description', content: this.currcategory.description }
 			]
 		}
 	}
